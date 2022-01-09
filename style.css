@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #192440;
+    --secondary-color: #00ffad;
+    --tertiary-color: #292b2c;
+    --quaternary-color: #ffffff;
+}
+
+html {
+    font-size: 10px;
+    font-family: Ubuntu, sans-serif;
+    line-height: 1.5;
+}
+
+/* Write your code below */
+/* Header */
+#banner{
+    background-image:url(./images/banner-bg-image.jpg);
+    padding: 6rem 0;
+    color: var(--quaternary-color);
+}
+#contact{
+    background-image: url(./images/contact-bg-image.jpg);
+    padding: 6rem 0;
+    color: var(--quaternary-color);
+}
+#banner header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#banner p {
+    font-size: 2rem;
+    margin: 2rem 0;
+}
+#banner header img {
+    max-width: 70px;
+}
+
+#banner header a {
+    color: var(--quaternary-color);
+    font-size: 2rem;
+    text-decoration: none;
+}
+.btn {
+    cursor: pointer;
+    text-align: center;
+    border: 2px solid transparent;
+    padding: 1.2rem 3rem;
+    margin: 2.4rem 0;
+    font-size: 1.6rem;
+    border-radius: 2.2rem;
+    line-height: 1.25;
+}
+.btn-secondary {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* Protection section */
+.protection {
+    text-align: center;
+}
+
+.protection .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+.protection h2 {
+    margin: 4rem 0;
+}
+.protection .cards h4 {
+    margin-bottom: 1rem;
+}
+.protection .cards .card {
+    flex: 1;
+}
+
+/* Features section */
+.features .feature-1-wrapper {
+    background-image: linear-gradient(to bottom right,#ffffff 50%,#00FFAD 0);
+}
+.features {
+    margin-top: 7rem;
+}
+.features .feature {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+.features .feature img {
+    max-width: 45%;
+}
+.features .feature-2-wrapper {
+    background-color: #00FFAD;
+}
+.btn-primary {
+    background: var(--primary-color);
+    color: var(--quaternary-color);
+}
+/* Pricing section */
+.pricing {
+    text-align: center;
+}
+
+.pricing > h2  {
+    margin: 4rem 0;
+}
+
+.pricing .cards {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.pricing .cards .card {
+    background: lightgray;
+    border-radius: 0.5rem;
+    padding: 2rem 1rem;
+    width: 100%;
+    max-width: 250px;
+  
+}
+
+.pricing .cards .card.dark {
+    background-color: var(--primary-color);
+    color: var(--quaternary-color);
+}
+
+.pricing .cards .card p  {
+    padding: 0.5rem 0;
+}
+
+.pricing .cards .card p span  {
+    font-size: 9rem;
+}
+.btn-outline-primary {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background-color: transparent;
+}
+
+/* Partners  section*/
+.partners {
+    margin: 4rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+   
+}
+/* Contact section */
+#contact .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+#contact form .first-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 2.5rem;
+}
+#contact form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+#contact form input, #contact form textarea {
+    border: 2px solid var(--secondary-color);
+    border-radius: 0.5rem;
+    color: var(--quaternary-color); 
+    padding: 1rem 1rem;
+    outline: none;
+    background-color: transparent;
+}
+#contact form label {
+    color: var(--secondary-color);
+}
+#contact .list-unstyled {
+    margin-top: 3rem;
+}
+#contact .list-unstyled li {
+    padding: 0.5rem 0;
+}
+#contact form .first-row .form-group ,#contact .contact-info, #contact .contact-form{
+    flex-grow: 1;
+}
+.fullwidth {
+    width: 100%;
+}
+/* Footer section*/
+footer {
+    background-color: var(--primary-color);
+    color: var(--quaternary-color);
+    padding: 3rem 4rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 2rem;
+}
+footer #social-media {
+    display: flex;
+    gap: 2rem;
+}
+
+footer #social-media a {
+    background: var(--quaternary-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+.list-unstyled {
+    list-style: none;
+}
+/* Resp */
+@media not screen and (min-width: 992px) {
+    .features .feature {
+        flex-direction: column;
+    }
+    .features .feature-1-wrapper {
+        background: var(--secondary-color);
+    }
+    .features .feature-2 img {
+        order: 1;
+    }
+}
+@media not screen and (min-width: 576px) {
+    .features .feature img {
+        max-width: 60%;
+    }
+}
+@media not all and (min-width: 768px) {
+    footer .container {
+        flex-direction: column;
+    }
+}
+
+/* Write your code above */
+
+h1 {
+    font-size: 7.2rem;
+    margin: 4.8rem 0;
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: 4.5rem;
+}
+
+p, li, label {
+    font-size: 1.6rem;
+}
+
+.font-weight-bold {
+    font-weight: 700;
+}
+
+.font-weight-light {
+    font-weight: 300;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
